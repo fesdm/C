@@ -1,0 +1,40 @@
+#include<stdio.h>
+void del_list(char L[],int i, int n)
+{
+    int j;
+
+    char NEW[20];
+    for(j=0;j<i;j++)
+    {
+
+        NEW[j]=L[j];
+    }
+
+    for(j=i;j<n-1;j++)
+    {
+
+        NEW[j]=L[j+1];
+
+    }
+
+    NEW[j] = '\0';
+    printf("NEW=%s",NEW);
+
+}
+
+int main()
+{
+    int r,n;
+    int lengthm,whichi;
+
+    char LIST[20]; ///take the list as an input so declare it as a character array=string.
+    printf("Enter r ie the which value you want to delete, and n that is the length of the string you want to enter\n");
+    scanf("%d %d",&lengthm,&whichi);
+    printf("Enter the list\n");
+    scanf("%s",LIST);
+    del_list(LIST,whichi,lengthm);
+    return 0;
+}
+
+
+//works exactly as i want it to work.
