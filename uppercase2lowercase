@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main()
+{
+   int merocharacter;
+   scanf("%c",&merocharacter);
+
+   if(merocharacter>='A'&&merocharacter<='Z')
+   {
+
+       printf("Lower case=%c",merocharacter+('a'-'A'));
+
+   }
+return 0;
+}
