@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+void delNthChar(char input[], int n, char output[]){
+  int j;
+  int length = strlen(input);
+
+  for (j = 0; j < n; j++)
+      output[j] = input[j];
+
+  for (j = n; j < length; j++)
+      output[j] = input[j+1];
+
+  output[j] = '\0';
+  printf ("output=%s", output);
+}
+
+int main (){
+  char input[] = "abcdef";
+  char output[7];
+  delNthChar(input, 2, output);
+  return 0;
+}
